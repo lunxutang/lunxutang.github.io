@@ -1,0 +1,22 @@
+.gallery {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.gallery-box {
+  width: 300px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.gallery-box img {
+  width: 100%;
+  border-radius: 10px;
+}
+/*Mouse Hover*/
+.gallery-box img:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,275 @@
+/*CSS*/
+body {
+  font-family: Arial;
+  background-color: #f0f0f0;
+  margin: 0;
+  min-height: 100vh;
+}
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto; /* 居中 */
+
+  background: white; /* 内容背景 */
+  min-height: 100vh; /* 撑满高度 */
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/*Header section*/
+.header {
+  height: 200px;
+  background-image: url("../Images/Banner.png");
+  position: relative;
+  display: flex;
+  justify-content: space-between; /* Separate lieft and right */
+  align-items: center;
+  padding: 20px;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0; /*Simplify code*/
+  background: rgba(65, 64, 64, 0.4);
+}
+/*Separate title*/
+.header .logo {
+  position: relative;
+  z-index: 1;
+}
+.header-content {
+  display: flex;
+  flex-direction: column;
+}
+.subtitle {
+  font-size: 14px;
+  opacity: 0.8;
+}
+.top-right {
+  display: flex;
+  gap: 10px;
+  position: relative;
+}
+
+/*Naviation Bar*/
+.navbar {
+  display: flex;
+  justify-content: left;
+  /*justify-content: space-between;*/
+  padding: 15px 40px;
+  gap: 40px;
+
+  background-color: #c9c0bd;
+  padding: 15px;
+}
+.navbar a {
+  color: white;
+  text-decoration: none; /*Clear link style*/
+  font-size: 16px;
+}
+.navbar a:hover {
+  color: #ff7340;
+}
+/*Highlight current page*/
+.navbar a.active {
+  color: #434343;
+}
+
+/*Main section*/
+.main {
+  padding: 40px;
+  flex: 1;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.buttons {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+/*Font section*/
+.fancy-text {
+  font-family: "Pacifico", cursive;
+  font-size: 30px;
+  color: #ff4081;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  animation: glow 1s infinite;
+}
+/*Animation*/
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px red;
+  }
+  50% {
+    text-shadow: 0 0 20px yellow;
+  }
+  100% {
+    text-shadow: 0 0 5px blue;
+  }
+}
+
+.about {
+  background-color: #e7e1df;
+  padding: 60px 40px;
+  gap: 40px;
+  border-radius: 10px; /*layer design*/
+  margin: 40px 0;
+}
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.about-text {
+  max-width: 500px;
+  flex: 1;
+}
+.about-image img {
+  width: 200px;
+  border-radius: 50%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/*Card section - Page link*/
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 0;
+}
+.card {
+  flex: 1 1 250px;
+  max-width: 300px;
+  height: 300px;
+
+  background-size: cover; /* 铺满 */
+  background-position: center; /* 居中裁剪 */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  color: white;
+  font-size: 20px;
+
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+
+  transition: transform 0.3s;
+}
+.card1 {
+  background-image: url("../Images/Test.png");
+}
+.card2 {
+  background-image: url("../Images/Test.png");
+}
+.card3 {
+  background-image: url("../Images/Test.png");
+}
+.card {
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(141, 141, 141, 0.3);
+  border-radius: 10px;
+}
+.card p {
+  position: relative;
+  z-index: 1;
+}
+/*Mouse Hover*/
+.card:hover {
+  transform: scale(1.05);
+}
+.card img {
+  width: 160px;
+  margin-bottom: 10px;
+  max-width: 100%;
+}
+/*Remove link format*/
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*Footer section*/
+.footer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  padding: 20px 40px;
+  align-items: center;
+  height: 200px;
+
+  background-image: url("../Images/Footer.png");
+  font-size: 18px;
+}
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  /*Move nav to center*/
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.footer a {
+  color: white;
+  text-decoration: none; /*Clear link style*/
+  font-size: 16px;
+}
+/*Mouse Hover*/
+.footer a:hover {
+  color: #8a3815;
+}
+.footer-logo {
+  height: 80px;
+  margin-bottom: 10px;
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(86, 86, 86, 0.3);
+  border-radius: 10px;
+}
