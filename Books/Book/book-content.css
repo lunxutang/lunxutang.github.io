@@ -1,0 +1,43 @@
+.book-info {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 20px;
+  margin: 40px 20px;
+
+  border-radius: 10px;
+  background-color: #c5c5c5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.book-cover img {
+  width: 200px;
+  border-radius: 8px;
+}
+.book-intro {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+  padding: 30px;
+  gap: 15px;
+  flex: 1;
+}
+.book-detail {
+  display: flex;
+  gap: 15px;
+}
+
+.chapter-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  margin: 30px 0;
+  gap: 20px;
+}
+.book-content {
+  padding: 30px;
+  margin: 60px 0;
+  gap: 20px;
+
+  border-radius: 10px;
+}
