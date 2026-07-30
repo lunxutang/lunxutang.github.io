@@ -1,0 +1,127 @@
+/*World Section*/
+.world {
+  padding: 40px;
+  position: relative;
+
+  border-radius: 10px; /*layer design*/
+  margin: 50px auto;
+  max-width: 900px;
+  height: 500px;
+
+  background-image: url(Images/Picture4.jpg);
+  background-position: center;
+  background-size: cover;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+.world::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(86, 86, 86, 0.3);
+  border-radius: 10px;
+  z-index: 0;
+}
+.world-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.world-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  height: 250px;
+}
+
+/*Books & Gellery Sections*/
+.sections-share {
+  background-color: #c5c5c5;
+  padding: 10px;
+  border-radius: 10px; /*layer design*/
+
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+.sections-image {
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  height: 300px;
+  flex: 1.25;
+}
+.sections-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(86, 86, 86, 0.3);
+  border-radius: 10px;
+  z-index: 0;
+}
+
+.sections-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0.75;
+}
+
+.books-img {
+  background-image: url(Images/Picture4.jpg);
+}
+.gallery-img {
+  background-image: url(Images/Picture4.jpg);
+}
+
+/*About Section*/
+.about {
+  background-color: #c5c5c5;
+  padding: 60px 40px;
+  gap: 40px;
+  border-radius: 10px; /*layer design*/
+  margin: 60px auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+.about-text {
+  max-width: 500px;
+  flex: 0.8;
+}
+.about-author img {
+  width: 200px;
+  padding: 10px;
+  border-radius: 50%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/*Share function*/
+section:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    text-align: center;
+  }
+}
