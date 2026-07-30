@@ -1,0 +1,51 @@
+.intro-words {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  padding: 60px;
+  height: 250px;
+  max-width: 900px;
+  gap: 60px;
+
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #c5c5c5;
+}
+
+.gallery-collection1 {
+  padding: 20px;
+  max-width: 900px;
+  margin: 60px auto;
+
+  border-radius: 10px;
+  background-color: #c5c5c5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.gallery-grid {
+  column-count: 3;
+  column-gap: 20px;
+}
+
+.gallery-card {
+  break-inside: avoid;
+  margin-bottom: 20px;
+  background-color: #707070;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.gallery-card img {
+  width: 100%;
+  display: block;
+}
+.gallery-card:hover {
+  transform: scale(1.05);
+}
+
+.card-text {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
