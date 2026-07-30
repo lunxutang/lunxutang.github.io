@@ -1,0 +1,36 @@
+.characters-collection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin: 40px;
+  padding: 20px;
+  flex: 1;
+
+  border-radius: 10px;
+  background-color: #c5c5c5;
+}
+.char-info {
+  gap: 20px;
+  margin: 40px 20px;
+
+  border-radius: 10px;
+  background-color: #707070;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.char-info:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+.char-cover img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.char-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
